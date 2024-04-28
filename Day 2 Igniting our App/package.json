@@ -1,0 +1,14 @@
+{
+  "name": "day-2-igniting-our-app",
+  "version": "1.0.0",
+  "description": "This is Namaste React ep02 ",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Aryan",
+  "license": "ISC",
+  "dependencies": {
+    "react-dom": "^18.3.1"
+  }
+}
