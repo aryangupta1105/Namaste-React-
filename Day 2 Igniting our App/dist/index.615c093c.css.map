@@ -1,0 +1,1 @@
+{"mappings":"ACAA,oBAGA","sources":["index.615c093c.css","index.css"],"sourcesContent":[".heading {\n  color: #00f;\n}\n\n.heading1 {\n  color: red;\n}\n/*# sourceMappingURL=index.615c093c.css.map */\n",".heading {\r\n     color: blue;\r\n}\r\n.heading1{\r\n    color: Red;\r\n}"],"names":[],"version":3,"file":"index.615c093c.css.map"}
