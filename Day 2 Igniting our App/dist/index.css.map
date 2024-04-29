@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;AAGA","sources":["index.css"],"sourcesContent":[".heading {\r\n     color: blue;\r\n}\r\n.heading1{\r\n    color: Red;\r\n}"],"names":[],"version":3,"file":"index.css.map","sourceRoot":"/__parcel_source_root/"}
