@@ -16,5 +16,5 @@
   "devDependencies": {
     "cssnano": "^7.0.1",
     "postcss": "^8.4.38"
-  }
+  } 
 }

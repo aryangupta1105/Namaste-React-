@@ -8,7 +8,7 @@
 - What is `Parcel/Webpack`? Why do we need it?
 - Why is `.parcel-cache`?
 - What is `npx`?
-- What is difference between `dependencies vs devDependencies`?
+- What is difference between `dependencies vs devDependencies`?.
 - What is Tree Shaking?
 - What is Hot Module Replacement?
 - List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
