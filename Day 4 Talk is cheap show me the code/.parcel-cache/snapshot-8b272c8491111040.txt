@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 5998
 138C:\Users\aarya\Namaste React Journey\Day 4 Talk is cheap show me the code\node_modules\@swc\helpers\src\_tagged_template_literal_loose.mjs133589808156318605 0
 103C:\Users\aarya\Namaste React Journey\Day 4 Talk is cheap show me the code\node_modules\srcset\readme.md133589808142948803 0
@@ -5997,3 +5998,13 @@
 96C:\Users\aarya\Namaste React Journey\Day 4 Talk is cheap show me the code\dist\index.7826abd7.js133590271590137788 0
 100C:\Users\aarya\Namaste React Journey\Day 4 Talk is cheap show me the code\dist\index.7826abd7.js.map133590271590227349 0
 97C:\Users\aarya\Namaste React Journey\Day 4 Talk is cheap show me the code\dist\index.9e4c6fd2.css133590271559718217 0
+=======
+7
+83C:\Users\aarya\Namaste React Journey\Day 4 Talk is cheap show me the code\index.css133588826672297119 0
+86C:\Users\aarya\Namaste React Journey\Day 4 Talk is cheap show me the code\AkshayApp.js133590245356095388 0
+86C:\Users\aarya\Namaste React Journey\Day 4 Talk is cheap show me the code\package.json133590271585346555 0
+91C:\Users\aarya\Namaste React Journey\Day 4 Talk is cheap show me the code\package-lock.json133589808706401421 0
+83C:\Users\aarya\Namaste React Journey\Day 4 Talk is cheap show me the code\food.jpeg133589819844025448 0
+80C:\Users\aarya\Namaste React Journey\Day 4 Talk is cheap show me the code\App.js133590239064538687 0
+84C:\Users\aarya\Namaste React Journey\Day 4 Talk is cheap show me the code\index.html133590246740481357 0
+>>>>>>> new

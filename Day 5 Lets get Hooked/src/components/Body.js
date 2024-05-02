@@ -1,12 +1,53 @@
+<<<<<<< HEAD
 import resList from "../utils/resList";
 import RestaurantCard from "./RestaurantCard";
 
 const Body = () => {
+=======
+import { useState } from "react";
+import { useEffect } from "react";
+import resList from "../utils/resList";
+import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer";
+
+const Body = () => {
+    const [listRestaurants , setListRestaurants] = useState([]);
+
+
+    useEffect(()=>{
+      fetchData();
+    } , []);
+    const fetchData = async ()=>{
+      const data = await fetch(
+        'https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.624480699999999&page_type=DESKTOP_WEB_LISTING'
+      );
+      const json = await data.json();
+      console.log(json)
+      const newData = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      console.log(newData);
+      setListRestaurants(newData);      
+    };
+    if(listRestaurants.length === 0){
+      return <Shimmer></Shimmer>
+    }
+>>>>>>> new
     return (
       <div className="body">
         <div className="search-container">
           <input type="text" placeholder="Search Food or Restaurant" />
+<<<<<<< HEAD
           <button>Search</button>
+=======
+          <button className="filter-btn" 
+          onClick={() =>{ 
+            const filteredList = listRestaurants.filter((res)=> res.info.avgRating > 4
+          );
+            setListRestaurants(filteredList);
+            }}
+          >
+            Top Rated Restaurants
+        </button>
+>>>>>>> new
         </div>
         <div className="res-container">
           
@@ -28,8 +69,13 @@ const Body = () => {
   
           {/* // * looping through the <RestaurentCard /> components Using Array.map() method */}
   
+<<<<<<< HEAD
           {resList.map((restaurant) => (
             <RestaurantCard key={restaurant.data.id} resData={restaurant} />
+=======
+          {listRestaurants.map((restaurant) => (
+            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+>>>>>>> new
           ))}
   
           {/* // * or */}
