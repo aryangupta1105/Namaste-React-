@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import resList from "../utils/resList";
-import RestaurantCard from "./RestaurantCard";
-
-const Body = () => {
-=======
 import { useState } from "react";
 import { useEffect } from "react";
 import resList from "../utils/resList";
@@ -30,14 +24,10 @@ const Body = () => {
     if(listRestaurants.length === 0){
       return <Shimmer></Shimmer>
     }
->>>>>>> new
     return (
       <div className="body">
         <div className="search-container">
           <input type="text" placeholder="Search Food or Restaurant" />
-<<<<<<< HEAD
-          <button>Search</button>
-=======
           <button className="filter-btn" 
           onClick={() =>{ 
             const filteredList = listRestaurants.filter((res)=> res.info.avgRating > 4
@@ -47,7 +37,6 @@ const Body = () => {
           >
             Top Rated Restaurants
         </button>
->>>>>>> new
         </div>
         <div className="res-container">
           
@@ -69,13 +58,8 @@ const Body = () => {
   
           {/* // * looping through the <RestaurentCard /> components Using Array.map() method */}
   
-<<<<<<< HEAD
-          {resList.map((restaurant) => (
-            <RestaurantCard key={restaurant.data.id} resData={restaurant} />
-=======
           {listRestaurants.map((restaurant) => (
             <RestaurantCard key={restaurant.info.id} resData={restaurant} />
->>>>>>> new
           ))}
   
           {/* // * or */}

@@ -4,13 +4,8 @@
   "description": "Optimizing Food ordering App",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
   "start": "parcel ./index.html ",
   "build": "parcel build ./index.html",
-=======
-    "start": "parcel ./index.html ",
-    "build": "parcel build ./index.html",
->>>>>>> new
     "test": "jest"
   },
   "author": "Aryan Gupta",
