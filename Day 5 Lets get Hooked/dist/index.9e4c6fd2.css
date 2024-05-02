@@ -1,0 +1,81 @@
+.header {
+  border: 1px solid #000;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.nav-items {
+  margin: 0 50px;
+}
+
+.nav-items li {
+  cursor: pointer;
+  margin: 0 50px;
+  list-style: none;
+}
+
+.item-container {
+  justify-content: space-between;
+  gap: 30px;
+  display: flex;
+}
+
+.logo {
+  width: 150px;
+}
+
+.shimmer-container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+}
+
+.body {
+  margin: 20px 10px;
+}
+
+.search-container {
+  gap: 30px;
+  margin: 20px;
+  display: flex;
+}
+
+.res-container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.shimmer-card, .res-card {
+  text-align: center;
+  background-color: #f0f0f0;
+  width: 200px;
+  height: 400px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.res-card:hover {
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.login-btn {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.login-btn:hover {
+  color: #fff;
+  background-color: #000;
+}
+/*# sourceMappingURL=index.9e4c6fd2.css.map */
