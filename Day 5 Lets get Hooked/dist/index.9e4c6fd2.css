@@ -27,7 +27,9 @@
 
 .shimmer-container {
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
   display: flex;
 }
 
@@ -36,15 +38,20 @@
 }
 
 .search-container {
-  gap: 30px;
+  gap: 10px;
   margin: 20px;
   display: flex;
 }
 
+.filter-btn {
+  margin: 20px;
+}
+
 .res-container {
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  padding: 0 50px;
   display: flex;
 }
 
@@ -66,7 +73,7 @@
   border: 1px solid #000;
 }
 
-.login-btn {
+.login-btn, .search-btn {
   cursor: pointer;
   background-color: #fff;
   border: 1px solid #000;
@@ -74,7 +81,7 @@
   width: 100px;
 }
 
-.login-btn:hover {
+.login-btn:hover, .search-btn:hover {
   color: #fff;
   background-color: #000;
 }

@@ -27556,22 +27556,29 @@ var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
     const [listRestaurants, setListRestaurants] = (0, _react.useState)([]);
+    const [filteredRestaurants, setFilteredRestaurants] = (0, _react.useState)([]);
+    const [searchValue, setSearchValue] = (0, _react.useState)("");
     (0, _react.useEffect)(()=>{
         fetchData();
     }, []);
+    // function definiton:
     const fetchData = async ()=>{
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.624480699999999&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.624480699999999&page_type=DESKTOP_WEB_LISTINGttps://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.624480699999999&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
         console.log(json);
         const newData = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        resLists = newData;
         console.log(newData);
         setListRestaurants(newData);
+        setFilteredRestaurants(newData);
     };
+    // Conditional Rendering
     if (listRestaurants.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 25,
+        lineNumber: 37,
         columnNumber: 14
     }, undefined);
+    console.log("body rendering");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
         children: [
@@ -27580,52 +27587,71 @@ const Body = ()=>{
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "text",
-                        placeholder: "Search Food or Restaurant"
+                        name: "search-res",
+                        placeholder: "Search Food or Restaurant",
+                        value: searchValue,
+                        onChange: (e)=>{
+                            setSearchValue(e.target.value);
+                        }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 30,
+                        lineNumber: 47,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "filter-btn",
+                        className: "search-btn",
                         onClick: ()=>{
-                            const filteredList = listRestaurants.filter((res)=>res.info.avgRating > 4);
-                            setListRestaurants(filteredList);
+                            console.log(listRestaurants);
+                            const filteredList = listRestaurants.filter((res)=>res.info.name.toLowerCase().includes(searchValue.toLowerCase()));
+                            setFilteredRestaurants(filteredList);
+                            console.log(listRestaurants);
                         },
-                        children: "Top Rated Restaurants"
+                        children: "Search\uD83D\uDD0D"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 31,
+                        lineNumber: 51,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 29,
+                lineNumber: 45,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "filter-btn",
+                onClick: ()=>{
+                    const filteredList = filteredRestaurants.filter((res)=>res.info.avgRating > 4);
+                    setFilteredRestaurants(filteredList);
+                },
+                children: "Top Rated Restaurants"
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 59,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "res-container",
-                children: listRestaurants.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                children: filteredRestaurants.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
                         resData: restaurant
                     }, restaurant.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 62,
+                        lineNumber: 89,
                         columnNumber: 13
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 41,
+                lineNumber: 68,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 28,
+        lineNumber: 44,
         columnNumber: 7
     }, undefined);
 };
-_s(Body, "RpNtcO1RTgghsbnkR10pPT236xk=");
+_s(Body, "+TTL/PgOvn/IxKqoLpNrLMg6meA=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -29903,6 +29929,83 @@ const Shimmer = ()=>{
             }, void 0, false, {
                 fileName: "src/components/Shimmer.js",
                 lineNumber: 18,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 19,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 20,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 21,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 22,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 23,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 24,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 25,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 26,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 27,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 28,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 29,
                 columnNumber: 13
             }, undefined)
         ]
